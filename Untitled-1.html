@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Cache-Control" content="no-cache"/>
+<meta http-equiv="Expires" content="0"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+<meta name="description" content="티시스는 IT, CS(고객상담서비스), 부동산관리, 건설, 레저, 식음 등 다양한 사업을 영위하고 있습니다." />
+<meta name="keywords" content="tsis, 태광" />
+
+<meta property="og:title" content="티시스(tsis) - Let's play together" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.tsis.co.kr" />
+<meta property="og:description" content="티시스는 IT, CS(고객상담서비스), 부동산관리, 건설, 레저, 식음 등 다양한 사업을 영위하고 있습니다." />
+
+<title>티시스(tsis) - Let's play together</title>
+<link href="/resources/static/css/reset.css" rel="stylesheet" />
+<link href="/resources/static/css/common.css" rel="stylesheet" />
+<link href="/resources/static/css/contents.css" rel="stylesheet" />
+<link href="/resources/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<link href="/resources/favicon.ico" rel="icon" type="image/x-icon"/>
+<script type="text/javascript" src="/resources/static/js/common.js"></script>
+<script type="text/javascript" src="/resources/static/js/ui.js"></script>
+    <script type="text/javascript">
+		$(document).ready(function(){
+			$(".newsContArea").each(function(index, item){
+				 var newText = $(this).text().replace(/<br\/>/ig, "\n");
+				 newText = newText.replace(/<(\/)?([a-zA-Z]*)(\s[a-zA-Z]*=[^>]*)?(\s)*(\/)?>/ig, "");
+				 newText = newText.substr(0,50) + "...";
+				 $(this).html(newText);
+			});
+		});
+        document.createElement("header");
+        document.createElement("nav");
+        document.createElement("section");
+        document.createElement("article");
+        document.createElement("footer");
+
+        $(function(){
+    		let timer = setTimeout(motion1,600)
+
+    		function motion1(){
+    			$('.mainSecVisual').addClass('goShow1');
+    			var tl = anime.timeline({
+    				easing:'linear'
+    			});
+    			tl.add({
+    				targets:'.mainSecVisual .linkGroup',
+    				opacity:0.4,
+    				duration: 50,
+    				begin: function(){
+    					setTimeout(function(){
+    						$('.mainSecVisual').addClass('goshow1End');
+    					},300)
+    				}
+    			})
+    			.add({
+    				targets:'.mainSecVisual .textBox .visualText',
+    				opacity:[
+    					{value:0},
+    					{value:1, duration:200}
+    				],
+    				scale:[
+    					{value:2, delay:200},
+    					{value:2, duration:100},
+    					{value:1}
+    				],
+    				translateY:[
+    					{value:10},
+    					{value:10, delay:100},
+    					{value:0}
+    				],
+    				easing:'easeInOutSine'
+    			}, '-=400')
+    			.add({
+    				targets:'.mainSecVisual .textBox .visualTit span',
+    				opacity:[0,1],
+    				translateY:[30,0],
+    				delay: function(el, i, l) {
+    					return i * 400;
+    				},
+    				easing:'easeInOutSine',
+    				complete: function(){
+    					$('.mainSecVisual').addClass('goShow2')
+    				}
+    			})
+    			.add({
+    				targets:'.mainSecVisual .linkGroup',
+    				opacity:1,
+    				delay: function(el, i, l) {
+    					return i * 200;
+    				},
+    				easing:'easeInOutSine',
+    				complete: function(el, i, l){
+    					$('.mainSecVisual').removeClass('goShow2');
+    					$('.mainSecVisual').addClass('goShow3');
+    				}
+    			})
+    		}
+
+    		$(window).scroll(function(){
+    			let scrollTop = $(window).scrollTop();
+    			let height = $(window).outerHeight();
+    			// $('.mainSecVisual .textBox').css({'transform':'translateY(-50%) scale( ' + (1 - scrollTop/(height*2)) + ')','opacity':1 - scrollTop/(height*2)})
+
+    			$('.mainSecVisual .linkGroup.type2').css({'transform':'translateY(' + scrollTop/8 + 'px)'})
+    			$('.mainSecVisual .linkGroup.type3').css({'transform':'translateY(' + -scrollTop/5 + 'px)'})
+    			$('.mainSecVisual .linkGroup.type4').css({'transform':'translateY(' + scrollTop/13 + 'px)'})
+    			$('.mainSecVisual .linkGroup.type5').css({'transform':'translateY(' + -scrollTop/10 + 'px)'})
+    			$('.mainSecVisual .linkGroup.type6').css({'transform':'translateY(' + scrollTop/10 + 'px)'})
+    		});
+    	});
+    </script>
+</head>
+<body>
+
+	<div id="wrap">
+		<!-- 헤더영역 -->
+		<!-- 메인 페이지만  class="main" 추가-->
+		<header id="headerWrap" class="main" >
+			
+
+
+
+<script type="text/javascript" src="/resources/homepage/js/notice/util/ajaxUtil.js"></script>
+<script type="text/javascript" src="/resources/homepage/js/header.js"></script>
+<script>
+	$(document).ready(function(){
+		if(location.pathname == '/') {
+			var parameter = {
+				"seq": 0
+			}
+			ajaxCaller.getListData(parameter);
+		}
+	});
+</script>
+
+<!-- 헤더영역 -->
+<div id="header">
+	<h1><a href="/">티시스 - tsis</a></h1>
+	<div class="right">
+		<a href="/static/introduce/company" class="link"><strong>tsis</strong> 소개</a>
+		<a href="#" class="btnMenu"><i>전체메뉴</i></a>
+	</div>
+	<nav class="nav">
+		<div class="bg"></div>
+		<div class="innerBox">
+			<div class="gnb"></div>
+		</div>
+	</nav>
+</div>
+<!-- //헤더영역 -->
+		</header>
+		<!-- //헤더영역 -->
+
+		<!-- 컨텐츠 영역 -->
+		<section id="container">
+			<!-- <section class="mainSecVisual goShow1 goShow3"> -->
+			<section class="mainSecVisual">
+				<div class="textBox moNone">
+					<!-- 2021-01-18 삭제 -->
+					<!-- <p class="visualIntroText">
+						<span class="type1">tsis</span>
+						<span class="type2">새로운시작</span>
+					</p> -->
+					<p class="visualText">Life Values</p>
+					<p class="visualTit">
+						<span>더 나은 내일, 더 나은 <br class="tb768" />세상을 위해</span>
+						<span>tsis가 함께하겠습니다.</span>
+					</p>
+				</div>
+
+				<!-- 2021-01-11 수정 -->
+				<div class="textBox pcNone">
+					<p class="visualText" data-animation="fadeInDown">Life Values</p>
+					<p class="visualTit" data-animation="fadeInUp" data-delay="600">
+						더 나은 내일, <br />더 나은 세상을 위해<br />
+						tsis가 <br />함께하겠습니다.
+					</p>
+				</div>
+				<span class="icoArrow">arrow</span>
+
+				<div class="bgItem">
+					<span class="item1" data-animation="fadeIn" data-delay="600" data-duration="400"></span>
+					<span class="item2" data-animation="fadeIn" data-delay="500" data-duration="400"></span>
+					<span class="item3" data-animation="fadeIn" data-delay="400" data-duration="400"></span>
+					<span class="item4" data-animation="fadeIn" data-delay="300" data-duration="400"></span>
+					<span class="item5" data-animation="fadeIn" data-delay="200" data-duration="400"></span>
+					<span class="item6" data-animation="fadeIn" data-delay="100" data-duration="400"></span>
+					<span class="item7" data-animation="fadeIn" data-delay="0" data-duration="400"></span>
+				</div>
+
+				<div class="bgItemM">
+					<!-- <span class="item1" data-animation="fadeIn" data-delay="0"></span> -->
+					<span class="item2" data-animation="fadeInDown" data-delay="150"></span>
+					<span class="item3" data-animation="fadeInRight" data-delay="300"></span>
+					<span class="item4" data-animation="fadeInRight" data-delay="450"></span>
+					<span class="item5" data-animation="fadeIn" data-delay="600"></span>
+					<span class="item6" data-animation="fadeInLeft" data-delay="750"></span>
+					<span class="item7" data-animation="fadeInLeft" data-delay="900"></span>
+				</div>
+
+				<div class="linkGroupWrap">
+					<span class="bgT"></span>
+					<div class="linkGroup type1">
+						<a href="/static/business/it-summary">
+							<p class="tit">IT</p>
+							<p class="btnMore">자세히 보기</p>
+						</a>
+						<span class="bg"></span>
+					</div>
+					<div class="linkGroup type2">
+						<a href="/static/business/property-summary">
+							<p class="tit">부동산</p>
+							<p class="btnMore">자세히 보기</p>
+						</a>
+						<span class="bg"></span>
+					</div>
+					<div class="linkGroup type3">
+						<a href="/static/business/food-summary">
+							<p class="tit">푸드</p>
+							<p class="btnMore">자세히 보기</p>
+						</a>
+						<span class="bg"></span>
+					</div>
+					<div class="linkGroup type4">
+						<a href="/static/business/cs-summary">
+							<p class="tit">CS</p>
+							<p class="btnMore">자세히 보기</p>
+						</a>
+						<span class="bg"></span>
+					</div>
+					<div class="linkGroup type5">
+						<a href="/static/business/build-summary">
+							<p class="tit">건설</p>
+							<p class="btnMore">자세히 보기</p>
+						</a>
+						<span class="bg"></span>
+					</div>
+					<div class="linkGroup type6">
+						<a href="/static/business/golf-summary">
+							<p class="tit">골프</p>
+							<p class="btnMore">자세히 보기</p>
+						</a>
+						<span class="bg"></span>
+					</div>
+				</div>
+
+				<!-- 2021-01-11 추가 -->
+				<div class="linkGroupM">
+					<a href="/static/business/it-summary" class="type1">
+						<p class="tit">IT</p>
+						<p class="btnMore">자세히 보기</p>
+					</a>
+					<a href="/static/business/food-summary" class="type2">
+						<p class="tit">푸드</p>
+						<p class="btnMore">자세히 보기</p>
+					</a>
+					<a href="/static/business/property-summary" class="type3">
+						<p class="tit">부동산</p>
+						<p class="btnMore">자세히 보기</p>
+					</a>
+					<a href="/static/business/cs-summary" class="type4">
+						<p class="tit">CS</p>
+						<p class="btnMore">자세히 보기</p>
+					</a>
+					<a href="/static/business/construct-summary" class="type5">
+						<p class="tit">건설</p>
+						<p class="btnMore">자세히 보기</p>
+					</a>
+					<a href="/static/business/golf-summary" class="type6">
+						<p class="tit">골프</p>
+						<p class="btnMore">자세히 보기</p>
+					</a>
+				</div>
+			</section>
+
+			<style>
+				.normal {
+					font-weight: normal !important;
+					font-size: 2.2rem;
+				}
+				button{
+					outline:none;
+				}
+				.slickArrow{
+					top:176px !important;
+				}
+				.btnGroup {
+					width:50% !important;
+				}
+				@media screen and (max-width: 767px) {
+					.normal {
+						font-size: 1.7rem !important;
+					}
+					mainSec02 h2 {
+						font-size: 2rem;
+						line-height: 1.42;
+						letter-spacing: -1.2px;
+					}
+				}
+			</style>
+
+			<div class="mainBg">
+				<section class="mainSec02">
+					<div class="innerBox">
+						<h2>
+						<span class="subTit">tsis소개</span>
+						<span class="normal">더 많은 사람들이 행복하고 풍요로운 삶을 누릴 수 있도록 <br>다양한 사업을 통해</span> 고객에게 신뢰받는 기업<span class="normal">으로 성장하고 있습니다.</span>
+						</h2>
+						<ul>
+							<li class="ico1" data-animation="fadeInUp">
+								<a href="/static/introduce/company">
+									<i><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 94"><defs><style>.ico1 .cls-1{fill:none;}.ico1 .cls-2{clip-path:url(#clip-path1);}.ico1 .cls-3{fill:#1dcdfc;}.ico1 .cls-4{fill:#cac5ff;}.ico1 .cls-5{fill:#fff;}.ico1 .cls-6{fill:#298aff;}</style><clipPath id="clip-path1" transform="translate(0 -6)"><rect class="cls-1" width="100" height="100"/></clipPath></defs><g id="레이어_2" data-name="레이어 2"><g id="아이콘_B"><g class="cls-2"><path class="cls-3" d="M60,6H14A14,14,0,0,0,0,20v80H34V56A14,14,0,0,1,48,42H74V20A14,14,0,0,0,60,6ZM28,51H18V41H28Zm0-16H18V25H28Zm16,0H34V25H44Z" transform="translate(0 -6)"/><path class="cls-4" d="M86,42H48A14,14,0,0,0,34,56v44H86a14,14,0,0,0,14-14V56A14,14,0,0,0,86,42Z" transform="translate(0 -6)"/><rect class="cls-5" x="55" y="56" width="10" height="10"/><rect class="cls-5" x="70" y="56" width="10" height="10"/><rect class="cls-5" x="55" y="71" width="10" height="10"/><path class="cls-6" d="M48,86V64a8,8,0,0,1,8-8h5.67S74,55,74,42H48A14,14,0,0,0,34,56v44S48,99,48,86Z" transform="translate(0 -6)"/></g></g></g></svg></i>
+									<p class="tit">회사개요</p>
+									<p class="text">전 계열사를 대상으로 금융, 방송<br />분야 등의 IT 서비스 전반을.</p>
+									<span class="linkText">바로가기</span>
+								</a>
+							</li>
+							<li class="ico2" data-animation="fadeInUp" data-delay="200">
+								<a href="/static/introduce/history">
+									<i><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 84"><defs><style>.ico2 .cls-1{fill:none;}.ico2 .cls-2{clip-path:url(#clip-path2);}.ico2 .cls-3{fill:#1dcdfc;}.ico2 .cls-4{fill:#cac5ff;}.ico2 .cls-5{fill:#3185ff;}.ico2 .cls-6{fill:#298aff;}</style><clipPath id="clip-path2" transform="translate(0 -16)"><rect class="cls-1" width="100" height="100"/></clipPath></defs><g id="레이어_2" data-name="레이어 2"><g id="아이콘_B"><g class="cls-2"><path class="cls-3" d="M68,16H14A14,14,0,0,0,0,30V70.8S0,80,8,84s12.8,2,16.9-2L82,54V30A14,14,0,0,0,68,16Z" transform="translate(0 -16)"/><path class="cls-4" d="M8,96a7,7,0,0,1-4.95-12l38-38a7,7,0,0,1,9.75-.15l12,11.27,25.2-26A7,7,0,1,1,98,40.87l-30,31a7,7,0,0,1-9.83.23L46.15,60.75,13,94A7,7,0,0,1,8,96Z" transform="translate(0 -16)"/><circle class="cls-5" cx="93" cy="20" r="7"/><path class="cls-6" d="M62.77,57.17,50.8,45.9a7,7,0,0,0-9.75.15l-36,36A13.47,13.47,0,0,0,8,84c8,4,12.8,2,16.9-2L46.15,60.75,58.2,72.1A7,7,0,0,0,68,71.87L82,57.43V37.3Z" transform="translate(0 -16)"/><path class="cls-4" d="M68,71.87a7,7,0,0,1-9.83.23L46.15,60.75,24.9,82C20.8,86,16,88,8,84a13.47,13.47,0,0,1-2.92-2l-2,2a7,7,0,0,0-2,4.6L1,90c0,6,5.27,10,13,10H68A14,14,0,0,0,82,86V57.43Z" transform="translate(0 -16)"/></g></g></g></svg></i>
+									<p class="tit">걸어온길</p>
+									<p class="text">tsis의 걸어온 길과 나아갈 길 <br />고객 여러분의 성공의 길.</p>
+									<span class="linkText">바로가기</span>
+								</a>
+							</li>
+							<li class="ico3" data-animation="fadeInUp" data-delay="400">
+								<a href="/static/introduce/group">
+									<i><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 88 100"><defs><style>.ico3 .cls-1{fill:none;}.ico3 .cls-2{clip-path:url(#clip-path3);}.ico3 .cls-3{fill:#c9c2f3;}.ico3 .cls-4{fill:#1dcdfc;}.ico3 .cls-5{fill:#298aff;}</style><clipPath id="clip-path3" transform="translate(-6)"><rect class="cls-1" width="100" height="100"/></clipPath></defs><g id="레이어_2" data-name="레이어 2"><g id="아이콘_B"><g class="cls-2"><path class="cls-3" d="M84,84a7,7,0,0,1-7-7A14,14,0,0,0,63,63H50a7,7,0,0,1,0-14H63A28,28,0,0,1,91,77,7,7,0,0,1,84,84Z" transform="translate(-6)"/><path class="cls-3" d="M16,84a7,7,0,0,1-7-7A28,28,0,0,1,37,49H50a7,7,0,0,1,0,14H37A14,14,0,0,0,23,77,7,7,0,0,1,16,84Z" transform="translate(-6)"/><rect class="cls-4" x="37" y="36" width="14" height="54"/><rect class="cls-5" y="80" width="20" height="20" rx="5"/><rect class="cls-5" x="34" y="80" width="20" height="20" rx="5"/><rect class="cls-5" x="68" y="80" width="20" height="20" rx="5"/><path class="cls-4" d="M57,14V26H43V14H57M63,0H37a8,8,0,0,0-8,8V32a8,8,0,0,0,8,8H63a8,8,0,0,0,8-8V8a8,8,0,0,0-8-8Z" transform="translate(-6)"/><rect class="cls-5" x="37" y="49" width="14" height="14"/></g></g></g></svg></i>
+									<p class="tit">그룹소개</p>
+									<p class="text">tsis는 IT,부동산,레저를 아우르는 <br />우리 경제의 더 '큰숲'으로 성장.</p>
+									<span class="linkText">바로가기</span>
+								</a>
+							</li>
+							<li class="ico4" data-animation="fadeInUp" data-delay="600">
+								<a href="/static/introduce/contactus">
+									<i><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 96 100"><defs><style>.ico4 .cls-1{fill:none;}.ico4 .cls-2{clip-path:url(#clip-path4);}.ico4 .cls-3{fill:#cac5ff;}.ico4 .cls-4{fill:#1dcdfc;}.ico4 .cls-5{fill:#fff;}.ico4 .cls-6{fill:#298aff;}</style><clipPath id="clip-path4" transform="translate(-2)"><rect class="cls-1" width="100" height="100"/></clipPath></defs><g id="레이어_2" data-name="레이어 2"><g id="아이콘_B"><g class="cls-2"><path class="cls-3" d="M79,59A19,19,0,1,1,98,40,19,19,0,0,1,79,59Z" transform="translate(-2)"/><path class="cls-4" d="M42,0A40,40,0,0,0,2,40c0,32.76,28.58,60,40,60S82,72.76,82,40A40,40,0,0,0,42,0Z" transform="translate(-2)"/><path class="cls-5" d="M42,59A19,19,0,1,1,61,40,19,19,0,0,1,42,59Z" transform="translate(-2)"/><path class="cls-6" d="M77.25,21.09A19,19,0,0,0,78.86,59,61,61,0,0,0,82,40,39.78,39.78,0,0,0,77.25,21.09Z" transform="translate(-2)"/></g></g></g></svg></i>
+									<p class="tit">Contact us</p>
+									<p class="text">tsis는 늘 고객 곁에 <br class="moNone" />있습니다.</p>
+									<span class="linkText">바로가기</span>
+								</a>
+							</li>
+						</ul>
+
+						<div class="bgItem">
+							<span class="item1" data-animation="fadeInUp" data-delay="300" data-waypoint-once="true"></span>
+							<span class="item2" data-animation="zoomIn" data-delay="500" data-waypoint-once="true"></span>
+						</div>
+					</div>
+				</section>
+
+				<section class="mainSec03" data-animation="fadeIn">
+					<div class="tab">
+						<a href="#" class="on">인재경영</a>
+						<a href="#">윤리경영</a>
+						<a href="#">나눔경영</a>
+					</div>
+					<div class="bgGroup">
+						<span class="bg1 on"></span>
+						<span class="bg2"></span>
+						<span class="bg3"></span>
+					</div>
+					<div class="slickWrap" data-animation="fadeInUp">
+						<div>
+							<div class="innerBox">
+								<p class="tit">
+									<strong>신의 : </strong>함께 일하고 원칙을 준수하고 신뢰를 쌓고,<br />
+									<strong>변화 : </strong>늘 새롭게 변화하고 성장하며<br />
+									<strong>실행 : </strong>현장에서 답을 찾기위해 앞장서 실천합니다.
+								</p>
+								<ul class="circle">
+									<li><a href="/static/talent/talent"><span>인재상</span></a></li>
+									<li><a href="/static/talent/systemInfo"><span>제도안내</span></a></li>
+									<li><a href="/static/talent/employ"><span>인재채용</span></a></li>
+								</ul>
+							</div>
+						</div>
+						<div>
+							<div class="innerBox">
+								<p class="tit">
+									태광가족은 <strong>깨끗하고 올바른 윤리의식을 고취</strong>하기<br />위하여 아래의 <strong>생활방식을 준수</strong>합니다.
+								</p>
+								<ul class="circle">
+									<li><a href="/static/management/lifeStyle"><span>태광가족<br />생활방식</span></a></li>
+									<li><a href="/static/management/goodLife"><span>티시스인의 <br />올바른 생활</span></a></li>
+									<li><a href="/static/management/sharedGrowth"><span>동반성장</span></a></li>
+								</ul>
+							</div>
+						</div>
+						<div>
+							<div class="innerBox">
+								<p class="tit">
+									고객 여러분에게 받은 사랑을 <strong>사회와 나누며 <br />기업의 사회적 책임을 적극 실천</strong>하겠습니다.
+								</p>
+								<ul class="circle">
+									<li><a href="/static/share/share"><span>따뜻한 빛</span></a></li>
+									<li><a href="/homepage/nanum/list"><span>나눔활동</span></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+
+
+
+				<section class="mainSec04">
+					<div class="innerBox">
+						<h2>
+							<span class="subTit">소식</span>
+							<!--항상 귀 기울이고 <strong>전문가의 정확한 시선으로 <br />고객을 감동</strong> 시킵니다. -->
+						</h2>
+
+						<div class="slickArrow">
+							<a href="#" class="btnPrev">이전으로</a>
+							<a href="#" class="btnNext">다음으로</a>
+						</div>
+
+						<div class="noticeSlick" data-animation="fadeInUp">
+						
+							
+									
+
+										<div>
+											<h3><a href="/homepage/news/list">뉴스</a></h3>
+											<a href="/homepage/news/view?seq=15">
+												<p class="tit"><span class="text">티시스-보건복지부, ‘독거노인사랑잇기사업‘ 협약 체결</span><span class="New">신규</span></p>
+												<p class="text newsContArea">&lt;p style=&#034;text-align: center; margin-top: 2px; margin-bottom: 2px;&#034; align=&#034;center&#034;&gt;&lt;span style=&#034;font-family: ;&#034;&gt;&lt;span style=&#034;font-size: 18pt; font-family: 나눔고딕, NanumGothic;&#034;&gt;&lt;b&gt;티시스-보건복지부, ‘독거노인사랑잇기사업‘ 협약 체결&lt;/b&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&#034;text-align: center; margin-top: 2px; margin-bottom: 2px;&#034; align=&#034;center&#034;&gt;&lt;img src=&#034;https://www.tsis.co.kr/upfile/temp/editor/images/img_07_29.jpg&#034; alt=&#034;&#034; width=&#034;620&#034; height=&#034;465&#034; style=&#034;font-size: 13.3333px; display: block; margin: 40px auto;&#034;&gt;&lt;span style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 10pt;&#034;&gt;&lt;/span&gt;&lt;/p&gt;&lt;div style=&#034;text-align: left; line-height: 1.8;&#034; align=&#034;center&#034;&gt;&lt;span style=&#034;font-size: 12pt; font-family: 나눔고딕, NanumGothic;&#034;&gt;&lt;span style=&#034;font-family: 나눔고딕, NanumGothic;&#034;&gt;티시스와 보건복지부는 5월 8일 서울 동대문 JW메리어트 호텔에서 제 48회 어버이날을 맞아 보건복지부 주최로 진행된 &amp;lt;2020년 어버이날 효사랑 큰잔치&amp;gt;에서 ‘독거노인사&lt;/span&gt;랑잇기 사업 업무협약’을 맺었다. 독거노인사랑잇기 사업은 독거노인과
+결연을 맺고 안부 확인, 자원봉사, 후원물품 등을 지원하는 것으로, 지난해 티시스를 포함해 122개 기업과 공공기관들이 참여했다.&lt;/span&gt;&lt;/div&gt;&lt;p style=&#034;margin-top: 2px; margin-bottom: 2px; font-size: 13.3333px; line-height: 1.8;&#034; align=&#034;center&#034;&gt;&lt;span style=&#034;font-size: 12pt; font-family: 나눔고딕, NanumGothic;&#034;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p style=&#034;text-align: left; margin-top: 2px; margin-bottom: 2px; font-size: 13.3333px; line-height: 1.8;&#034; align=&#034;left&#034;&gt;&lt;span style=&#034;font-size: 12pt; font-family: 나눔고딕, NanumGothic;&#034;&gt;티시스 CS사업본부는 지난해부터 ‘사랑잇는전화’ 활동을 전개하고 있다. 봉사자와 어르신이 1대1로 매칭되어 안부전화를 드리는 활동 이외에도 지난
+2월에는 코로나19와 관련해 마스크를 전달하는 등 꾸준한 활동을 진행하고 있다. 또 이번 어버이날을 맞아 ‘사랑잇는전화’로 맺어진 어르신들에게 1인당 10kg 쌀을 전달했다.&lt;/span&gt;&lt;/p&gt;&lt;p style=&#034;margin-top: 2px; margin-bottom: 2px;
+font-family:  ; font-size: 13.3333px;&#034;&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&#034;margin-top: 2px; margin-bottom: 2px; font-family:  ; font-size: 13.3333px;&#034;&gt;&lt;br&gt;&lt;/p&gt;</p>
+												<p class="date">2020-05-08</p>
+											</a>
+										</div>
+
+									
+
+										<div>
+											<h3><a href="/homepage/news/list">뉴스</a></h3>
+											<a href="/homepage/news/view?seq=8">
+												<p class="tit"><span class="text">티시스, 보건복지부 장관상 수상</span><span class="New">신규</span></p>
+												<p class="text newsContArea">&lt;p align=&#034;center&#034; style=&#034;margin: 0cm; margin-bottom: .0001pt; text-align: center&#034;&gt;
+	&lt;b&gt;&lt;span style=&#034;font-size: 10pt; font-family: 나눔고딕, NanumGothic;&#034;&gt;&lt;span style=&#034;font-size: 18pt;&#034;&gt;태광그룹 티시스&lt;/span&gt;&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 18pt;&#034;&gt;, &lt;/span&gt;&lt;span style=&#034;font-size: 18pt;&#034;&gt;소외계층 어르신을 위한&lt;/span&gt;&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 18pt;&#034;&gt; ‘&lt;/span&gt;&lt;span style=&#034;font-size: 18pt;&#034;&gt;사랑 잇는 전화&lt;/span&gt;&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 18pt;&#034;&gt;’ &lt;/span&gt;&lt;span style=&#034;font-size: 18pt;&#034;&gt;보건복지부 장관상 수상&lt;/span&gt;&lt;span lang=&#034;EN-US&#034;&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;
+	&lt;/span&gt;&lt;/b&gt;
+&lt;/p&gt;
+&lt;p style=&#034;margin: 0cm; margin-bottom: .0001pt; text-size-adjust: none; outline: none&#034;&gt;
+	&lt;span style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 10pt;&#034;&gt;
+	&lt;/span&gt;&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 10pt;&#034;&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/span&gt;
+&lt;/p&gt;
+&lt;p style=&#034;margin: 0cm; margin-bottom: .0001pt; text-size-adjust: none; outline: none&#034;&gt;
+	&lt;span style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 10pt;&#034;&gt;
+	&lt;/span&gt;&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;· &lt;/span&gt;&lt;span style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;보건복지부
+		주최&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt; ‘&lt;/span&gt;독거노인
+		사랑 나눔의 장&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;’ &lt;/span&gt;수기
+		공모전서 장관상&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt; 5&lt;/span&gt;명 수상&lt;span lang=&#034;EN-US&#034;&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;
+	&lt;/span&gt;
+&lt;/p&gt;
+&lt;p style=&#034;margin: 0cm; margin-bottom: .0001pt; text-size-adjust: none; outline: none&#034;&gt;
+	&lt;span style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;
+	&lt;/span&gt;&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;· &lt;/span&gt;&lt;span style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;봉사자와
+		어르신&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt; 1:1 &lt;/span&gt;매칭
+		안부전화 활동&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;…6&lt;/span&gt;개월동안
+		총&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt; 2,100&lt;/span&gt;여건
+		통화&lt;span lang=&#034;EN-US&#034;&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;
+	&lt;/span&gt;
+&lt;/p&gt;
+&lt;p style=&#034;margin: 0cm; margin-bottom: .0001pt; text-size-adjust: none; outline: none&#034;&gt;
+	&lt;span style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;
+	&lt;/span&gt;&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;· &lt;/span&gt;&lt;span style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;그 외 밥퍼
+		봉사&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;, &lt;/span&gt;연탄배달
+		등 다양한 소외계층을 위한 사회공헌 진행&lt;span lang=&#034;EN-US&#034;&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;
+	&lt;/span&gt;
+&lt;/p&gt;
+&lt;p style=&#034;margin: 0cm; margin-bottom: .0001pt; text-size-adjust: none; outline: none&#034;&gt;
+	&lt;span style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;
+	&lt;/span&gt;&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/span&gt;
+&lt;/p&gt;
+&lt;p style=&#034;text-align: center; margin: 0cm 0cm 0.0001pt; text-size-adjust: none; outline: none;&#034; align=&#034;center&#034;&gt;
+	&lt;span style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;
+	&lt;/span&gt;&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/span&gt;
+&lt;/p&gt;
+
+&lt;img src=&#034;https://www.tsis.co.kr/upfile/temp/editor/images/20200122170634187_CC01MBQO.jpg&#034; title=&#034;&#034; alt=&#034;보건복지부 주최 ‘독거노인 사랑 나눔의 장’ 수기 공모전서 장관상 수상했다&#034; style=&#034;display:block; margin:40px auto 40px&#034;&gt;
+&lt;p align=&#034;center&#034; style=&#034;margin: 0cm 0cm 0.0001pt; text-align: center; text-size-adjust: none; outline: none; line-height: 1.8;&#034;&gt;
+	&lt;span style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;
+	&lt;/span&gt;&lt;span style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;사진
+		설명&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt; : &lt;/span&gt;보건복지부
+		주최&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt; ‘&lt;/span&gt;독거노인
+		사랑 나눔의 장&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;’ &lt;/span&gt;수기
+		공모전서 장관상 수상했다&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;.&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;
+	&lt;/span&gt;
+&lt;/p&gt;
+&lt;p align=&#034;center&#034; style=&#034;margin: 0cm 0cm 0.0001pt; text-align: center; text-size-adjust: none; outline: none; line-height: 1.8;&#034;&gt;
+	&lt;span style=&#034;font-family: &amp;amp; amp;&#034; ;=&#034;&#034; mso-ascii-theme-font:=&#034;&#034; minor-latin;=&#034;&#034; mso-fareast-theme-font:=&#034;&#034; mso-hansi-theme-font:=&#034;&#034; minor-latin&#034;=&#034;&#034;&gt;&lt;span lang=&#034;EN-US&#034;&gt;&lt;br&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;/p&gt;
+&lt;p style=&#034;margin: 0cm 0cm 0.0001pt; text-size-adjust: none; outline: none; line-height: 1.8;&#034;&gt;
+	&lt;span style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;
+	&lt;/span&gt;&lt;span style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;태광그룹
+		인프라&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;·&lt;/span&gt;레저
+		계열사인 티시스는 그룹 사회공헌 슬로건인&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt; ‘&lt;/span&gt;따뜻한
+		빛&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;’&lt;/span&gt;을
+		바탕으로 연말연초를 맞아 다양한 사회공헌 활동을 진행했다&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;.&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;
+	&lt;/span&gt;
+&lt;/p&gt;
+&lt;p style=&#034;margin: 0cm 0cm 0.0001pt; text-size-adjust: none; outline: none; line-height: 1.8;&#034;&gt;
+	&lt;span style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;
+	&lt;/span&gt;&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/span&gt;
+&lt;/p&gt;
+&lt;p style=&#034;margin: 0cm 0cm 0.0001pt; text-size-adjust: none; outline: none; line-height: 1.8;&#034;&gt;
+	&lt;span style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;
+	&lt;/span&gt;&lt;span style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;티시스는
+		지난해&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt; 12&lt;/span&gt;월
+		보건복지부가 주최하고 독거노인종합지원센터가 주관하는&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt; ‘2019&lt;/span&gt;년
+		홀로 사는 어르신을 위한 사랑 나눔의 장&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;’ &lt;/span&gt;수기
+		공모전 부문에서 보건복지부 장관상을 총&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt; 5&lt;/span&gt;명이
+		수상했다&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;. &lt;/span&gt;수기
+		공모전에 당선된 임직원들은 지난해&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt; 7&lt;/span&gt;월부터
+		활동하는 나눔천사 봉사단들이다&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;.&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;
+	&lt;/span&gt;
+&lt;/p&gt;
+&lt;p style=&#034;margin: 0cm 0cm 0.0001pt; text-size-adjust: none; outline: none; line-height: 1.8;&#034;&gt;
+	&lt;span style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;
+	&lt;/span&gt;&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/span&gt;
+&lt;/p&gt;
+&lt;p style=&#034;margin: 0cm 0cm 0.0001pt; text-size-adjust: none; outline: none; line-height: 1.8;&#034;&gt;
+	&lt;span style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;
+	&lt;/span&gt;&lt;span style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;회사는
+		지난해&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt; 7&lt;/span&gt;월부터
+		독거노인 종합지원센터와 협약을 맺어 진행하고 있는&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt; ‘&lt;/span&gt;사랑
+		잇는 전화&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;’ &lt;/span&gt;활동을
+		진행하고 있다&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;. &lt;/span&gt;이
+		사업은 혼자 계신 어르신의 안전과 안부를 확인하며 말벗이 되어드리는 봉사활동으로 봉사자와 어르신이&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;
+			1&lt;/span&gt;대&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;1&lt;/span&gt;로
+		매칭되어 주&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt; 2&lt;/span&gt;회 이상
+		안부전화를 드리는 활동이다&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;.&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;
+	&lt;/span&gt;
+&lt;/p&gt;
+&lt;p style=&#034;margin: 0cm 0cm 0.0001pt; text-size-adjust: none; outline: none; line-height: 1.8;&#034;&gt;
+	&lt;span style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;
+	&lt;/span&gt;&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/span&gt;
+&lt;/p&gt;
+&lt;p style=&#034;margin: 0cm 0cm 0.0001pt; text-size-adjust: none; outline: none; line-height: 1.8;&#034;&gt;
+	&lt;span style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;
+	&lt;/span&gt;&lt;span style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;회사는
+		사내공모를 통해&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt; 60&lt;/span&gt;명의
+		나눔천사 봉사단을 선발했다&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;. &lt;/span&gt;나눔천사
+		봉사단은&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt; 7&lt;/span&gt;월부터
+		연말인&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt; 12&lt;/span&gt;월말까지
+		독거노인 어르신&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt; 1&lt;/span&gt;명당&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;
+			2~3&lt;/span&gt;회씩 총&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt; 2,100&lt;/span&gt;여건의
+		안부전화를 실시했다&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;.&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;
+	&lt;/span&gt;
+&lt;/p&gt;
+&lt;p style=&#034;margin: 0cm 0cm 0.0001pt; text-size-adjust: none; outline: none; line-height: 1.8;&#034;&gt;
+	&lt;span style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;
+	&lt;/span&gt;&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/span&gt;
+&lt;/p&gt;
+&lt;p style=&#034;margin: 0cm 0cm 0.0001pt; text-size-adjust: none; outline: none; line-height: 1.8;&#034;&gt;
+	&lt;span style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;
+	&lt;/span&gt;&lt;span style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;그
+		외에도 지난&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt; 12&lt;/span&gt;월&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;
+			26&lt;/span&gt;일 서울 동대문구에 위치한 밥퍼나눔운동본부에서 홀몸 어르신과 무의탁 어르신&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;, &lt;/span&gt;노숙자
+		분들을 대상으로 밥퍼 봉사활동을 진행했다&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;. &lt;/span&gt;임직원&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;
+			20&lt;/span&gt;명이 참여해 오전부터 급식소를 찾아&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt; 1&lt;/span&gt;천명분의
+		밥과 국&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;, &lt;/span&gt;반찬을
+		준비해 점심식사를 대접하는 시간도 가졌다&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;.&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;
+	&lt;/span&gt;
+&lt;/p&gt;
+&lt;p style=&#034;margin: 0cm 0cm 0.0001pt; text-size-adjust: none; outline: none; line-height: 1.8;&#034;&gt;
+	&lt;span style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;
+	&lt;/span&gt;&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/span&gt;
+&lt;/p&gt;
+&lt;p style=&#034;margin: 0cm 0cm 0.0001pt; text-size-adjust: none; outline: none; line-height: 1.8;&#034;&gt;
+	&lt;span style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;
+	&lt;/span&gt;&lt;span style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;또&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;,
+	&lt;/span&gt;지난&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt; 12&lt;/span&gt;월&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;
+			16&lt;/span&gt;일 수원시 팔달구에 저소득층 독거노인을 대상으로&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt; ‘&lt;/span&gt;사랑의
+		연탄봉사활동&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;’&lt;/span&gt;을
+		진행했다&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;. &lt;/span&gt;임직원&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;
+			60&lt;/span&gt;여명이 참여한 행사에는 따스한 손길이 필요한 이웃들에게 약&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt; 2,000&lt;/span&gt;여장의
+		연탄을 전달했다&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;.&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;/p&gt;
+&lt;p style=&#034;margin: 0cm 0cm 0.0001pt; text-size-adjust: none; outline: none; line-height: 1.8;&#034;&gt;
+	&lt;span style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;
+	&lt;/span&gt;&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/span&gt;
+&lt;/p&gt;
+&lt;p style=&#034;margin: 0cm 0cm 0.0001pt; text-size-adjust: none; outline: none; line-height: 1.8;&#034;&gt;
+	&lt;span style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;
+	&lt;/span&gt;&lt;span style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;티시스
+		관계자는&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt; “&lt;/span&gt;작은
+		실천이지만 앞으로도 다양한 소외계층과 도움이 필요한 곳을 찾아 지원하는 기업의 사회적 가치 실현에 노력할 것&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;”&lt;/span&gt;이라고
+		말했다&lt;span lang=&#034;EN-US&#034; style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;.&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;
+	&lt;/span&gt;
+&lt;/p&gt;&lt;p class=&#034;&#034; style=&#034;text-size-adjust: none; outline: none; margin: 0cm 0cm 8pt; text-align: justify; line-height: 1.8; font-size: 10pt;&#034; ;&#034;=&#034;&#034;&gt;
+	&lt;span style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;
+	&lt;/span&gt;&lt;span lang=&#034;EN-US&#034; style=&#034;font-size: 12pt; font-family: 나눔고딕, NanumGothic;&#034;&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/span&gt;
+&lt;/p&gt;
+</p>
+												<p class="date">2020-01-09</p>
+											</a>
+										</div>
+
+									
+
+										<div>
+											<h3><a href="/homepage/news/list">뉴스</a></h3>
+											<a href="/homepage/news/view?seq=13">
+												<p class="tit"><span class="text">CS사업본부, ’19년 케이블TV CS우수자 수상</span><span class="New">신규</span></p>
+												<p class="text newsContArea">&lt;p style=&#034;text-align: center; margin-top: 2px; margin-bottom: 2px;&#034; align=&#034;center&#034;&gt;
+	&lt;span style=&#034;font-family:; color: rgb(119, 119, 119);&#034;&gt;&lt;span style=&#034;font-size: 18pt; font-family: 나눔고딕, NanumGothic;&#034;&gt;&lt;b&gt;CS사업본부,
+				’19년 케이블TV CS우수자 수상&lt;/b&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;/p&gt;
+
+		&lt;img src=&#034;https://www.tsis.co.kr/upfile/temp/editor/images/img_05_27.jpg&#034; alt=&#034;&#034; width=&#034;620&#034; height=&#034;465&#034; style=&#034;display:block; margin:40px auto 40px&#034;&gt;
+
+&lt;p style=&#034;text-align: left; list-style-type: none; vertical-align: middle; color: rgb(119, 119, 119); line-height: 1.8;&#034; 맑은=&#034;&#034; 고딕&#034;,=&#034;&#034; &#034;malgun=&#034;&#034; gothic&#034;,=&#034;&#034; dotum,=&#034;&#034; sans-serif;=&#034;&#034; text-align:=&#034;&#034; justify;&#034;=&#034;&#034; align=&#034;left&#034;&gt;
+	&lt;span style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;10월
+		16일 광화문 아트홀에서는 한국케이블TV방송협회 주관으로 케이블방송 고객을 위해 항상 애쓰는 고객서비스 담당자를 위한
+		‘2019년 CS DAY’가 진행되었다.&lt;/span&gt;
+&lt;/p&gt;
+&lt;p style=&#034;text-align: left; list-style-type: none; vertical-align: middle; color: rgb(119, 119, 119); line-height: 1.8;&#034; 맑은=&#034;&#034; 고딕&#034;,=&#034;&#034; &#034;malgun=&#034;&#034; gothic&#034;,=&#034;&#034; dotum,=&#034;&#034; sans-serif;=&#034;&#034; text-align:=&#034;&#034; justify;&#034;=&#034;&#034; align=&#034;left&#034;&gt;&lt;span style=&#034;font-size: 12pt;&#034;&gt;
+	&lt;/span&gt;&lt;span style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;&amp;nbsp;&lt;/span&gt;
+&lt;/p&gt;
+&lt;p style=&#034;text-align: left; list-style-type: none; vertical-align: middle; color: rgb(119, 119, 119); line-height: 1.8;&#034; 맑은=&#034;&#034; 고딕&#034;,=&#034;&#034; &#034;malgun=&#034;&#034; gothic&#034;,=&#034;&#034; dotum,=&#034;&#034; sans-serif;=&#034;&#034; text-align:=&#034;&#034; justify;&#034;=&#034;&#034; align=&#034;left&#034;&gt;&lt;span style=&#034;font-size: 12pt;&#034;&gt;
+	&lt;/span&gt;&lt;span style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;올해
+		7회째를 맞는 CS DAY는 전국에서 고객들의 해결사 역할을 수행 중인 CS 담당자의 노고에 감사를 표하기 위해 마련되었다.
+		행사는 사랑의 백미 기부 행사와 우수 상담사, 기사 및 CS스토리 우수작 시상식, 특별 강연, 축하공연 순으로 진행되었다.&lt;/span&gt;
+&lt;/p&gt;
+&lt;p style=&#034;text-align: left; list-style-type: none; vertical-align: middle; color: rgb(119, 119, 119); line-height: 1.8;&#034; 맑은=&#034;&#034; 고딕&#034;,=&#034;&#034; &#034;malgun=&#034;&#034; gothic&#034;,=&#034;&#034; dotum,=&#034;&#034; sans-serif;=&#034;&#034; text-align:=&#034;&#034; justify;&#034;=&#034;&#034; align=&#034;left&#034;&gt;&lt;span style=&#034;font-size: 12pt;&#034;&gt;
+	&lt;/span&gt;&lt;span style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;&amp;nbsp;&lt;/span&gt;
+&lt;/p&gt;
+&lt;p style=&#034;text-align: left; list-style-type: none; vertical-align: middle; color: rgb(119, 119, 119); line-height: 1.8;&#034; 맑은=&#034;&#034; 고딕&#034;,=&#034;&#034; &#034;malgun=&#034;&#034; gothic&#034;,=&#034;&#034; dotum,=&#034;&#034; sans-serif;=&#034;&#034; text-align:=&#034;&#034; justify;&#034;=&#034;&#034; align=&#034;left&#034;&gt;&lt;span style=&#034;font-size: 12pt;&#034;&gt;
+	&lt;/span&gt;&lt;span style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;시상식은
+		사전 공모한 CS업무 사례 중 우수사례 7편을 발표하고 우수상담사와 우수기사로 선정된 각 14명에 대한 시상이 함께
+		진행되었다. 이날 수상자 중에는 CS사업본부 티브로드 콜센터의 박관옥 상담사와 김윤희 상담사가 우수상담사로 선정되었으며,
+		정성연 상담사의 경우 CS스토리 우수작으로 선정되는 기쁨을 누렸다.&lt;/span&gt;
+&lt;/p&gt;&lt;p style=&#034;text-align: left; list-style-type: none; vertical-align: middle; color: rgb(119, 119, 119);&#034; 맑은=&#034;&#034; 고딕&#034;,=&#034;&#034; &#034;malgun=&#034;&#034; gothic&#034;,=&#034;&#034; dotum,=&#034;&#034; sans-serif;=&#034;&#034; text-align:=&#034;&#034; justify;&#034;=&#034;&#034; align=&#034;left&#034;&gt;&lt;span style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 10pt;&#034;&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;</p>
+												<p class="date">2019-10-16</p>
+											</a>
+										</div>
+
+									
+
+										<div>
+											<h3><a href="/homepage/news/list">뉴스</a></h3>
+											<a href="/homepage/news/view?seq=12">
+												<p class="tit"><span class="text">티브로드 콜센터, 지능형 상담 ‘디지털 ARS’ 도입</span><span class="New">신규</span></p>
+												<p class="text newsContArea">&lt;p style=&#034;margin-top: 2px; margin-bottom: 2px;&#034;&gt;
+	&lt;span style=&#034;font-family:;&#034;&gt;&lt;span style=&#034;font-size: 13.3333px;&#034;&gt;&lt;br&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;/p&gt;
+&lt;p style=&#034;text-align: center; margin-top: 2px; margin-bottom: 2px;&#034; align=&#034;center&#034;&gt;
+	&lt;span style=&#034;font-family:;&#034;&gt;&lt;span style=&#034;font-size: 18pt; font-family: 나눔고딕, NanumGothic;&#034;&gt;&lt;b&gt;티브로드
+				콜센터, 지능형 상담 ‘디지털 ARS’ 도입&lt;/b&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;/p&gt;
+&lt;img src=&#034;https://www.tsis.co.kr/upfile/temp/editor/images/img_04_26.jpg&#034; alt=&#034;&#034; width=&#034;620&#034; height=&#034;465&#034; style=&#034;display:block; margin:40px auto 40px&#034;&gt;
+&lt;p style=&#034;line-height: 1.8;&#034;&gt;
+	&lt;span style=&#034;font-size: 12pt; font-family: 나눔고딕, NanumGothic;&#034;&gt;티브로드는
+		케이블TV 방송사 최초로 고객센터 대표 전화번호(1877-7000)와 스마트폰을 연계한 지능형 상담 시스템 ‘디지털 ARS’를
+		도입했다.&lt;/span&gt;
+&lt;/p&gt;
+&lt;p style=&#034;margin-top: 2px; margin-bottom: 2px; font-size: 13.3333px; line-height: 1.8;&#034;&gt;&lt;span style=&#034;font-size: 12pt;&#034;&gt;
+	&lt;/span&gt;&lt;span style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;&amp;nbsp;&lt;/span&gt;
+&lt;/p&gt;
+&lt;p style=&#034;margin-top: 2px; margin-bottom: 2px; font-size: 13.3333px; line-height: 1.8;&#034;&gt;&lt;span style=&#034;font-size: 12pt;&#034;&gt;
+	&lt;/span&gt;&lt;span style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;디지털
+		ARS는 기존의 음성 ARS를 스마트폰 화면으로 옮겨놓은 보이는 ARS와 함께 고객이 원하는 업무를 화면을 보면서 처리할 수
+		있도록 만든 서비스이다. 요금 확인, 결제, 청구서 발송, 실시간 AS 신청∙변경∙취소 등과 같이 문의가 많은 단순 상담도
+		전화 연결을 기다릴 필요 없이 셀프 서비스로 쉽고 빠르게 해결 가능하다.&lt;/span&gt;
+&lt;/p&gt;
+&lt;p style=&#034;margin-top: 2px; margin-bottom: 2px; font-size: 13.3333px; line-height: 1.8;&#034;&gt;&lt;span style=&#034;font-size: 12pt;&#034;&gt;
+	&lt;/span&gt;&lt;span style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;&amp;nbsp;&lt;/span&gt;
+&lt;/p&gt;
+&lt;p style=&#034;margin-top: 2px; margin-bottom: 2px; font-size: 13.3333px; line-height: 1.8;&#034;&gt;&lt;span style=&#034;font-size: 12pt;&#034;&gt;
+	&lt;/span&gt;&lt;span style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;디지털
+		ARS를 통해 기존 음성 ARS에 불편을 느꼈던 고객이나 청각 장애를 가진 고객들의 불편함을 해소하고 단순 업무 상담시간을
+		줄여 고객센터의 상담 품질도 향상될 것으로 기대하고 있다.&lt;/span&gt;
+&lt;/p&gt;</p>
+												<p class="date">2019-09-10</p>
+											</a>
+										</div>
+
+									
+
+										<div>
+											<h3><a href="/homepage/news/list">뉴스</a></h3>
+											<a href="/homepage/news/view?seq=11">
+												<p class="tit"><span class="text">CS사업본부 흥국생명 콜센터, ‘보험범죄 신고‘ 포상식 진행</span><span class="New">신규</span></p>
+												<p class="text newsContArea">&lt;p style=&#034;text-align: center;&#034; align=&#034;center&#034;&gt;
+	&lt;span style=&#034;font-family:;&#034;&gt;&lt;span style=&#034;font-size: 18pt; font-family: 나눔고딕, NanumGothic;&#034;&gt;&lt;b&gt;CS사업본부
+				흥국생명 콜센터, ‘보험범죄 신고‘ 포상식 진행&lt;/b&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;/p&gt;
+&lt;img src=&#034;https://www.tsis.co.kr/upfile/temp/editor/images/img_03_25.jpg&#034; alt=&#034;&#034; width=&#034;620&#034; height=&#034;314&#034; style=&#034;display:block; margin:40px auto 40px&#034;&gt;
+
+&lt;p style=&#034;margin-top: 2px; margin-bottom: 2px; font-size: 13.3333px; line-height: 1.8;&#034;&gt;
+	&lt;span style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;CS사업본부는
+		8월 27일 영등포사옥 11층 대교육장에서 흥국생명으로부터 보험범죄 예방에 기여한 공로를 인정받은 흥국생명 콜센터 홍영미
+		상담사의 보험범죄 신고 포상식이 진행되었다.&lt;/span&gt;
+&lt;/p&gt;
+&lt;p style=&#034;margin-top: 10px; margin-bottom: 2px; font-size: 13.3333px; line-height: 1.8;&#034;&gt;&lt;span style=&#034;font-size: 12pt;&#034;&gt;
+	&lt;/span&gt;&lt;span style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;홍영미
+		상담사는 보험금 신청서류 중 병원 처방전 교부일자 부분에 종이를 덧붙인 흔적을 발견해 해당 내용을 흥국생명 보험금심사팀에
+		전달하였다. 심사팀의 조사결과, 고객이 제출한 서류가 위∙변조된 사항이 확인되어 고객에게 지급된 보험금을 환수 조치하였다.&lt;/span&gt;
+&lt;/p&gt;
+&lt;p style=&#034;margin-top: 10px; margin-bottom: 2px; font-size: 13.3333px; line-height: 1.8;&#034;&gt;&lt;span style=&#034;font-size: 12pt;&#034;&gt;
+	&lt;/span&gt;&lt;span style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;해당
+		사례는 최근 팩스와 모바일 접수가 급격히 늘어나면서 최근 높아진 보험사기에 대한 경각심을 불러 일으키는 계기가 되었다.&lt;/span&gt;
+&lt;/p&gt;&lt;p style=&#034;margin-top: 10px; margin-bottom: 2px; font-family:; font-size: 13.3333px;&#034;&gt;&lt;span style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 10pt;&#034;&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;</p>
+												<p class="date">2019-08-27</p>
+											</a>
+										</div>
+
+									
+
+										<div>
+											<h3><a href="/homepage/news/list">뉴스</a></h3>
+											<a href="/homepage/news/view?seq=10">
+												<p class="tit"><span class="text">CS사업본부, ‘고객중심 정도경영 UCC 공모전’ 개최</span><span class="New">신규</span></p>
+												<p class="text newsContArea">&lt;p style=&#034;text-align: center; margin-top: 2px; margin-bottom: 2px;&#034; align=&#034;center&#034;&gt;&lt;span style=&#034;font-family:;&#034;&gt;&lt;span style=&#034;font-size: 18pt; font-family: 나눔고딕, NanumGothic;&#034;&gt;&lt;b&gt;CS사업본부,
+				‘고객중심 정도경영 UCC 공모전’ 개최&lt;/b&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;/p&gt;
+&lt;img src=&#034;https://www.tsis.co.kr/upfile/temp/editor/images/img_02_24.jpg&#034; alt=&#034;&#034; width=&#034;620&#034; height=&#034;299&#034; style=&#034;display:block; margin:40px auto 40px&#034;&gt;
+&lt;p style=&#034;margin-top: 2px; margin-bottom: 2px; font-size: 13.3333px; line-height: 1.8;&#034;&gt;&lt;span style=&#034;font-size: 12pt;&#034;&gt;
+	&lt;/span&gt;&lt;span style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;CS사업본부는
+		8월 9일 영등포사옥 대교육장에서 ‘고객중심 정도경영 UCC 공모전‘ 시상식을 가졌다. 이번 행사는 고객중심 정도경영 활동에
+		대한 전 직원의 참여유도 및 관심도 제고를 위해 마련되었다.&lt;/span&gt;
+&lt;/p&gt;
+&lt;p style=&#034;margin-top: 10px; margin-bottom: 2px; font-size: 13.3333px; line-height: 1.8;&#034;&gt;&lt;span style=&#034;font-size: 12pt;&#034;&gt;
+	&lt;/span&gt;&lt;span style=&#034;font-family: 나눔고딕, NanumGothic; font-size: 12pt;&#034;&gt;공모주제는
+		용모/복장, 언어 활용, 출퇴근, 회식문화, 식당 이용, 엘리베이터 등 비즈니스 에티켓으로 주어졌다. 최우수상은 언어예절을
+		주제로한 최윤철 슈퍼바이저(쇼핑엔터 콜센터)가 있는 연합팀이 수상하는 등 총 17개 작품을 선정해 시상했다. 향후 회사는
+		직원들의 아이디어로 제작된 UCC를 사내 교육 콘텐츠로 활용할 계획이다.&lt;/span&gt;
+&lt;/p&gt;</p>
+												<p class="date">2019-08-09</p>
+											</a>
+										</div>
+
+									
+							
+							
+						
+					</div>
+						<div class="btnGroup" data-animation="fadeInUp" style="width: 100% !important;">
+							<a href="/homepage/notice/list" style="flex:1 1;">
+								<p class="tit">공지사항</p>
+								<span>바로가기</span>
+							</a>
+							<a href="/homepage/notice/addCooper" style="flex:1 1;">
+								<p class="tit">협력업체등록안내</p>
+								<span>바로가기</span>
+							</a>
+						</div>
+
+						<div class="bgItem">
+							<span class="item1" data-animation="fadeInUp" data-delay="300" data-waypoint-once="true"></span>
+							<span class="item2" data-animation="zoomIn" data-delay="500" data-waypoint-once="true"></span>
+							<span class="item3" data-animation="fadeInUp" data-delay="300" data-waypoint-once="true"></span>
+							<span class="item4" data-animation="zoomIn" data-delay="500" data-waypoint-once="true"></span>
+						</div>
+					</div>
+				</section>
+			</div>
+		</section>
+		<!-- //컨텐츠 영역 -->
+
+		<!-- 퀵메뉴 -->
+		
+		
+<aside class="quickWrap">
+	<!-- 퀵메뉴 -->
+	<div class="quickMenu">
+	    <a href="#" class="quick1">사업부소개</a>
+    	<a href="#" class="btnTop">TOP</a>
+	</div>
+	<div class="quickViewWrap">
+	    <div class="bg"></div>
+	    <div class="quickViewCont">
+	        <div class="quickTab">
+	            <a href="/static/business/it-summary" class="on">IT</a>
+	            <a href="/static/business/cs-summary">CS</a>
+	            <a href="/static/business/property-summary">부동산</a>
+	            <a href="/static/business/build-summary">건설</a>
+	            <a href="/static/business/golf-summary">골프</a>
+	            <a href="/static/business/food-summary">푸드</a>
+	        </div>
+	
+	        <div class="quickCont">
+	            <div class="on">
+	                <h1>IT</h1>
+	                <p class="text"><strong>주소 : </strong>서울특별시 중구 남대문로 15 흥국생명 남대문 5호<br /> 별관 12층 (우)04526</p>
+	                <p class="text"><strong>대표번호 : </strong>070–8188-0500</p>
+	                <a href="/static/business/it-summary" class="btnMore">자세히보기</a>
+	                <p class="img"><img src="/resources/static/images/quick/img_quick1.png" alt="" /></p>
+	            </div>
+	            <div>
+	                <h1>CS</h1>
+	                <p class="text"><strong>주소 : </strong>서울 영등포구 버드나루로2길 7 흥국생명빌딩</p>
+	                <p class="text"><strong>대표번호 : </strong>070-8188-0852</p>
+	                <a href="/static/business/cs-summary" class="btnMore">자세히보기</a>
+	                <p class="img"><img src="/resources/static/images/quick/img_quick2.png" alt="" /></p>
+	            </div>
+	            <div>
+	                <h1>부동산</h1>
+	                <p class="text"><strong>주소 : </strong>서울시 중구 동호로 310 (장충동2가 162-1)<br> 태광산업 별관 8층</p>
+	                <p class="text"><strong>대표번호 : </strong>070-8189-9301</p>
+	                <a href="/static/business/property-summary" class="btnMore">자세히보기</a>
+	                <p class="img"><img src="/resources/static/images/quick/img_quick3.png" alt="" /></p>
+	            </div>
+	            <div>
+	                <h1>건설</h1>
+	                <p class="text"><strong>주소 : </strong>서울 중구 장충단로8가길 1 동림38빌딩</p>
+	                <p class="text"><strong>대표번호 : </strong>070-8189-0100</p>
+	                <a href="/static/business/build-summary" class="btnMore">자세히보기</a>
+	                <p class="img"><img src="/resources/static/images/quick/img_quick4.png" alt="" /></p>
+	            </div>
+	            <div>
+	                <h1>골프</h1>
+	                <p class="text"><strong>주소 : </strong>경기도 용인시 기흥구 흥덕4로 77(신갈동) | 446-599</p>
+	                <p class="text"><strong>대표번호 : </strong>1877-6001</p>
+	                <a href="/static/business/golf-summary" class="btnMore">자세히보기</a>
+	                <p class="img"><img src="/resources/static/images/quick/img_quick5.png" alt="" /></p>
+	            </div>
+	            <div>
+	                <h1>푸드</h1>
+	                <p class="text"><strong>주소 : </strong>서울 중구 장충단로8가길 1 동림38빌딩</p>
+	                <p class="text"><strong>대표번호 : </strong>070-8189-9352</p>
+	                <a href="/static/business/food-summary" class="btnMore">자세히보기</a>
+	                <p class="img"><img src="/resources/static/images/quick/img_quick6.png" alt="" /></p>
+	            </div>
+	        </div>
+	
+	        <a href="#" class="quickClose">사업부소개닫기</a>
+	    </div>
+	</div>
+	<!-- //퀵메뉴 -->
+</aside>
+		<!-- //퀵메뉴 -->
+
+		<!-- 하단 영역 -->
+		
+		
+
+<footer id="footerWrap">
+	<!-- 하단 영역 -->
+	<div id="footer">
+		<div class="innerBox">
+			<!-- <a href="#" class="btnTop">맨위로</a> -->
+			<h1>tsis</h1>
+			<ul class="footerLink">
+				<li>
+					<a href="#privacy" class="layerPopOpen" id="privacyView">개인정보처리방침</a>
+					<div class="layerPopOpenS">
+						<a href="#">개인정보처리방침</a>
+						<div class="view">
+							<a href="#privacy" class="layerPopOpen">(주)티시스 아이티</a>
+						</div>
+					</div>
+
+				</li>
+				<li><a href="#noEmail" class="layerPopOpen">이메일주소 무단수집거부</a></li>
+				<li><a href="/static/introduce/contactus">오시는길</a></li>
+				<li class="right"><a
+					href="http://www.taekwanggroup.co.kr/homepage/board/socialContributionOutlineIntro.do"
+					target="_blank">태광그룹 사회공헌</a></li>
+<!-- 				<li><a -->
+<!-- 					href="http://www.taekwanggroup.co.kr/homepage/board/taekwangNewspaperIntro.do" -->
+<!-- 					target="_blank">태광신문고</a></li> -->
+			</ul>
+			<div class="subsidiary">
+				<a href="#">계열사 바로가기</a>
+				<div class="view">
+					<a href="http://www.taekwang.co.kr" target="_blank">태광산업</a> <a
+						href="http://www.daehansf.co.kr" target="_blank">대한화섬</a> <a
+						href="http://www.taekwangsf.com" target="_blank">태광화섬 유한공사</a> <a
+						href="http://www.heungkuklife.co.kr" target="_blank">흥국생명</a> <a
+						href="https://www.heungkukfire.co.kr" target="_blank">흥국화재</a> <a
+						href="http://www.heungkuksec.co.kr" target="_blank">흥국증권</a> <a
+						href="http://www.hkfund.co.kr" target="_blank">흥국자산운용</a> <a
+						href="http://www.goryosb.co.kr" target="_blank">고려저축은행</a> <a
+						href="http://www.yegaramsb.co.kr" target="_blank">예가람저축은행</a> <a
+						href="http://www.imtcast.com" target="_blank">티캐스트</a> <a
+						href="https://www.cinecube.co.kr/" target="_blank">씨네큐브</a> <a
+						href="https://www.kcttel.com:2443/" target="_blank">한국케이블텔레콤(kct)</a> <a
+						href="http://www.tsis.co.kr" target="_blank">tsis</a> <a
+						href="http://www.trncompany.co.kr" target="_blank">티알엔</a> <a
+						href="http://www.sehwa.hs.kr/" target="_blank">세화고등학교</a> <a
+						href="http://www.sehwa-gs.hs.kr/" target="_blank">세화여자고등학교</a> <a
+						href="http://www.sewha.ms.kr/" target="_blank">세화여자중학교</a> <a
+						href="https://www.iljufoundation.org/" target="_blank">일주학술문화재단</a>
+					<a href="https://www.sehwamuseum.org/" target="_blank">세화예술문화재단</a>
+					<a href="https://www.pinkspiders.co.kr/" target="_blank">핑크스파이더스
+						배구단</a>
+				</div>
+			</div>
+			<p class="address">주소. ㈜티시스 서울시 중구 남대문로 15 흥국생명 남대문5호 별관 12층</p>
+			<p class="tel">
+				<span>대표전화. <a class="call" href="tel:070-8188-0500">070-8188-0500</a></span>   <span>팩스. <a class="call" href="tel:070-7614-3415">070-7614-3415</a></span>   <span>tsisbill. <a class="call" href="tel:070-8188-0660">070-8188-0660</a></span>
+			</p>
+			<p class="copy">Copyright(c)2021 Total service & Information
+				System Co.Ltd. All rights reserved.</p>
+			<a href="http://www.mervin.co.kr/" target="_blank" class="icoMervin">MERvin</a>
+			<a href="http://www.xn--2z2bv62bj3e.com/" target="_blank" class="icoHope">큰희망</a>
+			<a href="#IsmsPop" class="layerPopOpen"><span class="icoIsms">정보보호 관리체계인증</span></a>
+			<div class="icoIsmT1">
+				<p class="icoIsmT2">[인증범위] 집적정보통신시설(IDC)운영</p>
+				<p class="icoIsmT2">[유효기간] 2021.06.02~2024.06.01</p>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- ISMS 정보보호 관리체계 인증서 팝업 -->
+	<div id="IsmsPop" class="layerPopWrap">
+		<!-- 팝업사이즈는 style로 기입 -->
+		<div class="layerPopCont">
+			<h1>정보보호 관리체계 인증서</h1>
+			<div class="popCont" style="padding:5px 10px 0;">
+				<img src="/resources/static/images/common/popup_isms.jpg" alt="티시스 정보보호 관리체계 인증서" style="width:100%;"/><br/>
+			</div>
+			<a href="#" class="btnClose btnPopClose">팝업창 닫기</a>
+		</div>
+	</div>
+	<!-- 개인정보처리방침 팝업 -->
+	<div id="privacy" class="layerPopWrap">
+		<div class="layerPopCont">
+			<h1>개인정보처리방침</h1>
+			<div class="popCont">
+				<div class="privacySelect">
+					<select>
+						<option value="2021_2">2021.09.01</option>
+						<option value="2021">2021.02.08</option>
+						<option value="2019">2019.12.04</option>
+						<option value="2018">2018.07.20</option>
+						<option value="2016">2016.11.22</option>
+						<option value="2015">초기시행</option>
+					</select>
+				</div>
+				<div class="privacyBox">
+					<p><strong>
+    ㈜티시스 아이티(이하 '회사')는 고객의 개인정보를 중요시하며, '정보통신망 이용촉진 및 정보보호 등에 관한 법률', '개인정보보호법' 등 회사가 준수해야할 관련 법령상의 개인정보보호 규정을 준수하고 있습니다.<br />
+    회사는 개인정보처리방침을 통하여 이용자께서 제공하는 개인정보가 어떠한 용도와 방식으로 이용되고 있으며 개인정보보호를 위해 어떠한 조치가 취해지고 있는지 알려드립니다.<br />
+    회사는 개인정보처리방침을 개정하는 경우 홈페이지 공지사항을 통하여 이용자에게 공지할 것입니다.
+</strong></p>
+
+<div class="linkGroup">
+<a href="#pop1">1.개인정보의 항목 및 수집방법</a>
+<a href="#pop2">2.개인정보의 수집 및 이용목적</a>
+<a href="#pop3">3.개인정보의 보유 및 이용 기간</a>
+<a href="#pop4">4.개인정보 처리 위탁</a>
+<a href="#pop5">5.개인정보 제 3자 제공</a>
+<a href="#pop6">6.개인정보의 파기절차 및 방법</a>
+<a href="#pop7">7.정보주체 및 법정대리인의 권리.의무 및 그 행사방법에 관한 사항</a>
+<a href="#pop8">8.개인정보 자동수집 장치의 설치, 운영 및 그 거부에 관한 사항</a>
+<a href="#pop9">9.개인정보의 안전성 확보 조치에 관한 사항</a>
+<a href="#pop10">10.개인정보 보호책임자 및 문의</a>
+<a href="#pop11">11.영상정보 처리기기 설치·운영</a>
+</div>
+
+<h2 id="pop1">1. 개인정보의 항목 및 수집방법</h2>
+<p>tsis홈페이지에서는 개인정보를 수집하지 않고 있습니다. 향후 개인정보 수집의 필요가 생길 경우, 이용자에게 수집하는 개인정보 수집항목, 목적, 처리 및 보유 기간 등에 대해 사전 동의를 받은 후 개인정보를 수집할 예정입니다.</p>
+<p class="small">※ 회사는 만 14세 미만 아동(이하 “아동”이라 함)의 개인정보를 수집하지 않고 있습니다. 다만, 개인정보 수집이 필요한 경우 반드시 법정대리인의 동의를 구하고 있습니다.</p>
+
+<h2 id="pop2">2. 개인정보의 수집 및 이용목적</h2>
+<p>회사는 원칙적으로 수집한 개인정보는 수집 및 이용목적 이외의 용도로는 사용되지 않으며, 이용 목적이 변경될 시에는 이용자(정보주체)의 사전 동의를 구할 예정입니다.</p>
+
+<h2 id="pop3">3. 개인정보의 처리 및 보유 기간</h2>
+<p>회사는 원칙적으로 개인정보 수집 및 이용목적이 달성된 후에는 해당 정보를 지체 없이 파기합니다.</p>
+<h3>다만, 수집목적 또는 제공 받은 목적이 달성된 경우에도 상법 등 법령의 규정에 의하여 보존할 필요성이 있는 경우에는 이용자의 개인정보를 보유할 수 있습니다.</h3>
+<p>- 관련 법령의 규정에 의하여 보존할 필요성이 있는 경우</p>
+<p>- 정당한 절차에 따라 보유기간을 미리 이용자에게 고지하거나 명시한 경우</p>
+
+<h2 id="pop4">4. 개인정보 처리 위탁</h2>
+<p>회사는 원칙적으로 이용자의 동의 없이 해당 개인정보의 처리를 타인에게 위탁하지 않습니다. <br/>다만, 이용자의 동의를 받아 회사가 현재 개인정보 처리를 위탁하는 사항은 다음과 같습니다.</p>
+<table style="width: 90%; border-collapse: collapse;">
+<tbody>
+<tr>
+<th style="width: 40%; color: #777777;">수탁자</th>
+<th style="color: #777777;">수탁업무</th>
+</tr>
+<tr>
+<td class="center">(주)월급날<br>(02-785-1604)</td>
+<td class="center" style="text-align:center">임직원 연말정산 업무 대행</td>
+</tr>
+<tr>
+<td class="center">(주)마이다스아이티<br>(031-789-2000)</td>
+<td class="center" style="text-align:center">채용홈페이지 및 채용관리 시스템 운영</td>
+</tr>
+<tr>
+<td class="center">(주)휴넷<br>(1588-6559)</td>
+<td class="center" style="text-align:center">임직원 법정 이러닝 교육 시스템 운영</td>
+</tr>
+<tr>
+<td class="center">(주)고려아카데미 컨설팅<br>(02-2106-8815)</td>
+<td class="center" style="text-align:center">임직원 독서통신 교육 시스템 운영</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="pop5">5. 개인정보 제 3자 제공</h2>
+<p>회사는 개인정보를 2항에서 고지한 범위 내에서 사용하며, 이용자의 사전 동의 없이는 동 범위를 초과하여 이용하거나 원칙적으로 이용자의 개인정보를 외부에 공개하지 않습니다. 다만, 아래의 경우에는 예외로 합니다.</p>
+<p>- 이용자들이 사전에 공개에 동의한 경우</p>
+<p>- 법령의 규정에 의거하거나, 수사 목적으로 법령에 정해진 절차와 방법에 따라 수사기관의 요구가 있는 경우</p>
+
+<h2 id="pop6">6. 개인정보의 파기절차 및 방법</h2>
+<p>회사는 개인정보의 수집 또는 이용목적이 달성된 후에는 해당정보를 지체 없이 파기합니다. 파기절차 및 방법은 다음과 같습니다.</p>
+<p>1) 파기절차</p>
+<p>- 이용자의 개인정보는 목적이 달성된 후 지체 없이 파기합니다.</p>
+<p>- 만약 3항에 따라 별도의 보유기간에 대해 동의 받았거나, 관계법령에 의해 보관이 필요한 경우, 동의받은 보유 및 이용기간에 따라 일정 기간 저장된 후 파기됩니다.</p>
+<p>2) 파기방법</p>
+<p>- 종이에 출력된 개인정보 : 분쇄기로 분쇄하거나 소각</p>
+<p>- 전자적 파일형태로 저장된 개인정보 : 기록을 재생할 수 없는 기술적 방법을 사용하여 삭제</p>
+
+<h2 id="pop7">7. 이용자와 법정대리인의 권리.의무 및 그 행사방법에 관한 사항</h2>
+<p>1) 이용자는 회사에 대해 언제든지 다음과 같은 개인정보 보호관련 권리를 행사할 수 있습니다.</p>
+<p>- 열람요구</p>
+<p>- 정정·삭제 요구</p>
+<p>- 처리정지 요구</p>
+<p>- 동의철회 요구 등</p>
+<p>2) 이용자가 서면, 전자우편, 모사전송(FAX) 등을 통하여 개인정보 열람 등의 요구를 하실 경우 지체 없이 조치하겠습니다. </p>
+<a href="https://www.tsis.co.kr/download/privacy/1_form.docx" target="_blank">[신청 서식-다운로드]</a>
+<p>3) 단, 회사는 다음 각 호에 해당하는 경우에는 개인정보의 전부 또는 일부에 대하여 열람 또는 정정 등을 거절할 수 있습니다.</p>
+<p>- 본인 또는 제3자의 생명, 신체, 재산 또는 권익을 현저하게 해할 우려가 있는 경우</p>
+<p>- 당해 서비스제공자의 업무에 현저한 지장을 미칠 우려가 있는 경우</p>
+<p>- 법령에 위반하는 경우 등</p>
+<p>4) 이용자가 개인정보의 오류 등에 대한 정정 또는 삭제를 요구한 경우, 정정 또는 삭제를 완료할 때까지 당해 개인정보를 이용하거나 제공하지 않습니다. 또한 회사는 이용자 혹은 법정대리인의 요청에 의해 해지 또는 삭제된 개인정보는 “개인정보의 보유 및 이용기간”에 명시된 바에 따라 처리하고 그 외의 용도로 열람 또는 이용할 수 없도록 처리하고 있습니다.</p>
+<p>5) 이용자는 위임을 받은 대리인을 통하여 개인정보 열람 등을 요구할 수 있습니다. 이 경우 위임장을 제출하여야 합니다. </p>
+<a href="https://www.tsis.co.kr/download/privacy/2_form.docx" target="_blank">[위임장-다운로드]</a>
+
+<h2 id="pop8">8. 개인정보 자동수집 장치의 설치, 운영 및 그 거부에 관한 사항</h2>
+<p>회사는 이용자의 이용정보를 저장하고 수시로 불러오는 '쿠키(cookie)를 사용하지 않습니다.</p>
+
+<h2 id="pop9">9. 개인정보의 안전성 확보 조치에 관한 사항</h2>
+<p>회사는 개인정보의 안전성 확보를 위해 다음과 같은 조치를 취하고 있습니다.</p>
+<h3>1) 관리적 조치</h3>
+<p>- 내부관리계획 수립 및 이행, 개인정보 처리 직원의 최소화 및 정기적 직원 교육, 정기적인 자체 감사 실시 등</p>
+<h3>2) 기술적 조치</h3>
+<p>- 개인정보처리시스템 등의 접근권한 관리, 접근통제시스템 설치, 개인정보의 암호화, 보안프로그램 설치 등</p>
+<h3>3) 물리적 조치</h3>
+<p>- 비인가자에 대한 출입 통제 등</p>
+
+<h2 id="pop10">10. 개인정보 보호책임자 및 문의</h2>
+<p>1) 회사는 개인정보 처리에 관한 업무를 총괄해서 책임지고, 개인정보 처리와 관련한 이용자의 불만 및 피해구제 등을 위하여 아래와 같이 개인정보보호책임자 및 담당부서를 지정하고 있습니다.</p>
+<p>2) 개인정보와 관련한 문의사항이 있으시면 아래의 개인정보관리부서로 연락 주시기 바랍니다. 이용자의 문의사항에 신속하고 성실하게 답변해드리겠습니다.</p><br />
+<p>1. 개인정보보호책임자</p>
+<p>- 소속: 인사팀</p>
+<p>- 이름: 구자엽 팀장</p>
+<p>- 연락처: 070-8188-3682, jayeopkoo@tsis.co.kr</p><br />
+<p>2. 개인정보보호관리자</p>
+<p>- 소속: 인사팀</p>
+<p>- 이름: 조은식 차장</p>
+<p>- 연락처: 070-8188-0506, cho9798@tsis.co.kr</p><br />
+<p>3) 기타 개인정보침해에 대한 신고나 상담이 필요하신 경우에는 아래 기관에 문의하시기 바랍니다.</p>
+<p>- 개인분쟁조정위원회 (www.kopico.go.kr / 국번없이 1833-6972)</p>
+<p>- 개인정보침해센터 (privacy.kisa.or.kr / 국번없이 118)</p>
+<p>- 대검찰청 사이버수사과 (www.spo.go.kr / 국번없이 1301)</p>
+<p>- 경찰청 사이버안전국 (cyberbureau.police.go.kr / 국번없이 182)</p>
+
+<h2 id="pop11">11. 영상정보 처리기기 설치·운영</h2>
+<p>1) 영상정보처리기기 설치근거, 목적</p>
+<p>회사는 개인정보보호법 제25조 제1항에 따라 다음과 같은 목적으로 영상정보처리기기를 설치·운영하고 있습니다.</p>
+<p>- 시설안전 및 화재 예방</p>
+<p>- 이용자의 안전을 위한 범죄 예방</p>
+<p>2) 설치 대수, 설치 위치, 촬영 범위</p>
+<table style="width: 90%; border-collapse: collapse;">
+<tbody>
+<tr>
+<th style="width: 30%; color: #777777;">설치위치</th>
+<th style="width: 50%; color: #777777;">촬영범위</th>
+<th style="color: #777777;">설치대수</th>
+</tr>
+<tr>
+<td class="center">남대문 본사</td>
+<td class="center" style="text-align:center">5층~13층 복도</td>
+<td class="center" style="text-align:center">9대</td>
+</tr>
+<tr>
+<td class="center">수내센터</td>
+<td class="center" style="text-align:center">9층~10층 복도</td>
+<td class="center" style="text-align:center">5대</td>
+</tr>
+</tbody>
+</table>
+<p>3) 관리책임자 및 접근권한자 영상정보를 보호하고 개인영상정보와 관련한 불만을 처리하기 위하여 아래와 같이 개인영상정보 보호책임자를 두고 있습니다.</p>
+<table style="width: 100%; border-collapse: collapse;">
+<tbody>
+<tr>
+<th style="width: 17%; color: #777777;">설치위치</th>
+<th style="width: 31%; color: #777777;">관리책임자</th>
+<th style="width: 31%;color: #777777;">접근권한자</th>
+<th style="color: #777777;">소속</th>
+</tr>
+<tr>
+<td class="center">남대문 본사</td>
+<td class="center" style="text-align:center">류정한 차장 (070-8188-0535)</td>
+<td class="center" style="text-align:center">박상욱 대리 (070-8188-0668)</td>
+<td class="center" style="text-align:center">인사팀</td>
+</tr>
+<tr>
+<td class="center">수내센터</td>
+<td class="center" style="text-align:center">서혁남 과장 (070-8188-0672)</td>
+<td class="center" style="text-align:center">성준모 대리 (070-8188-0797)</td>
+<td class="center" style="text-align:center">인프라서비스팀 / 보안통제</td>
+</tr>
+</tbody>
+</table>
+<p>4) 영상정보 촬영시간, 보관기간, 보관장소, 처리방법</p>
+<table style="width: 100%; border-collapse: collapse;">
+<tbody>
+<tr>
+<th style="width: 20%; color: #777777;">설치위치</th>
+<th style="width: 22%; color: #777777;">촬영시간</th>
+<th style="width: 30%; color: #777777;">보관기간</th>
+<th style="color: #777777;">보관장소</th>
+</tr>
+<tr>
+<td class="center">남대문 본사</td>
+<td class="center" style="text-align:center" rowspan="2">24시간</td>
+<td class="center" style="text-align:center" rowspan="2">촬영일로부터 30일이내 <br>※저장매체의 용량을 초과하는 경우, 가장 오래된 영상정보부터 순차적으로 자동삭제</td>
+<td class="center" style="text-align:center">12층 TPS실</td>
+</tr>
+<tr>
+<td class="center">수내센터</td>
+<td class="center" style="text-align:center">10층 네트워크실</td>
+</tr>
+</tbody>
+</table>
+<p>- 처리방법</p>
+<p>개인영상정보의 목적 외 이용, 제3자 제공, 파기, 열람 등 요구에 관한 사항을 기록·관리하고, 보관기간 만료 시 복원이 불가능한 방법으로 영구 삭제(출력물의 경우 파쇄 또는 소각)합니다.</p>
+<p>5) 영상정보 확인 방법 및 장소</p>
+<p>- 확인방법 : 영상정보 관리책임자에 미리 연락 후 방문</p>
+<p>- 확인장소 : 남대문 본사 12층 인사팀, 수내센터 10층 인프라서비스팀/보안통제</p>
+<p>6) 정보주체의 영상정보 열람 등 요구에 대한 조치</p>
+<p>개인영상정보에 관하여 열람 또는 존재확인·삭제를 원하는 경우 영상정보처리기기 운영자에게 요구하실 수 있습니다. 단, 이용자가 촬영된 개인영상정보 및 명백히 정보주체의 급박한 생명, 신체, 재산의 이익을 위하여 필요한 개인영상정보에 한정됩니다. 회사는 개인영상정보에 관하여 열람 또는 존재확인·삭제를 요구한 경우 지체 없이 필요한 조치를 하겠습니다.</p>
+<p>7) 영상정보 보호를 위한 안정성 확보 조치</p>
+<p>회사에서 처리하는 영상정보는 안전한 물리적 보관을 위하여 비인가자의 접근이 차단되는 통제구역에 보관·관리되고 있습니다. 개인영상정보보호를 위한 관리적 대책으로서 개인정보에 대한 접근 권한을 최소 인원에게 부여하고 있습니다. 개인영상정보의 위변조 방지를 위하여 개인영상정보의 생성 일시, 열람 시 열람 목적·열람자·열람 일시 등을 기록하여 관리하고 있습니다.</p>
+<br />
+<p>- 개인정보처리방침 시행일자 : 2021년 09월 01일</p>
+				</div>
+			</div>
+			<div class="btnGroup line">
+				<a href="#" class="btn2 btnPopClose">확인</a>
+			</div>
+			<a href="#" class="btnClose btnPopClose">팝업창 닫기</a>
+		</div>
+	</div>
+	<!-- 이메일 주소 무단 수집 거부 팝업 -->
+	<div id="noEmail" class="layerPopWrap">
+		<!-- 팝업사이즈는 style로 기입 -->
+		<div class="layerPopCont">
+			<h1>이메일주소 무단수집거부</h1>
+			<div class="popCont">
+				<div class="noEmailCont">
+					<h2>이메일 주소 무단 수집거부</h2>
+					<p class="text">본 웹사이트에서 게시된 이메일 주소가 전자우편 수집프로그램이나 그 밖의 기술적 장치를
+						이용하여 무단으로 수집되는 것을 거부하며 이를 위한 시 정보통신망법에 의하여 형사처벌 됩니다.</p>
+				</div>
+			</div>
+			<div class="btnGroup line">
+				<a href="#" class="btn2 btnPopClose">확인</a>
+			</div>
+			<a href="#" class="btnClose btnPopClose">팝업창 닫기</a>
+		</div>
+	</div>
+
+	<div id="tsisIT" class="layerPopWrap">
+		<!-- 팝업사이즈는 style로 기입 -->
+		<div class="layerPopCont">
+			<h1>수집한 개인정보처리방침 팝업</h1>
+			<div class="popCont">
+				<div class="noEmailCont">
+					<p class="text">(주)티시스 아이티</p>
+				</div>
+			</div>
+			<div class="btnGroup line">
+				<a href="#" class="btn2 btnPopClose">확인</a>
+			</div>
+			<a href="#" class="btnClose btnPopClose">팝업창 닫기</a>
+		</div>
+	</div>
+
+	<script>
+		$(function() {
+			$(document).on(
+					'change',
+					'.privacySelect select',
+					function() {
+						const src = '/resources/static/html/privacy'
+								+ $(this).val() + '.html'
+						$('.privacyBox').load(src).scrollTop(0);
+						return false;
+					})
+
+		})
+
+	</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- 210120_구글애널리틱스 주석
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-155760788-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-155760788-1');
+</script>
+ -->
+</footer>
+
+	</div>
+<!-- //하단 영역 -->
+
+</body>
+</html>
